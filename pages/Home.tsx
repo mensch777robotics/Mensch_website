@@ -1,0 +1,133 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export const Home: React.FC = () => {
+    return (
+        <div className="flex flex-col items-center">
+            <div className="w-full max-w-[1200px] flex flex-col gap-16 md:gap-32 pt-24 pb-10 px-4 md:px-10">
+                
+                {/* Hero Section */}
+                <section className="relative w-full rounded-[2.5rem] overflow-hidden min-h-[600px] md:min-h-[750px] flex items-end p-6 md:p-12 shadow-2xl border border-white/5 opacity-0 animate-fade-in-up [animation-delay:200ms]">
+                    <div 
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 hover:scale-105" 
+                        style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhr7W8La_AM9e4AIB9SaUKD9PFKz7bW8ccyg4iQUs30djuhuhkgEuEKTwPQdHyOrhFCTEwRknbh6s3aXgrBWRUwosF-rMip8tXUxmMFafx3ELR2RiKQuGbZDQoqfNcMo5e0pN6Vpbd_YlLiE_z1TEqyBVog6BsqBz4hFdgfD9NAX7k_3RbhKsPxyt6OaJHoY2WYHb6OaEgBBmz5-upSV7WeBqxkUfX5QX7Fo0fRkElPRU0QJzuDr9Q13EwzL58wI2U85eCFIL6cw")'}}
+                    ></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    
+                    <div className="relative z-10 w-full flex flex-col md:flex-row items-end justify-between gap-8">
+                        <div className="flex flex-col gap-4 max-w-2xl">
+                            <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tighter drop-shadow-lg">
+                                Physical AI <br/>
+                                <span className="text-slate-400">For Every Space</span>
+                            </h1>
+                            <p className="text-slate-300 text-lg md:text-xl font-light max-w-lg mt-2 leading-relaxed drop-shadow-md">
+                                Enhancing lives and driving positive change through advanced robotics integrated seamlessly into human environments.
+                            </p>
+                        </div>
+                        <div className="flex gap-4">
+                            <Link to="/fleet" className="h-14 px-8 rounded-full bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-colors flex items-center gap-2 shadow-lg shadow-blue-900/50">
+                                Explore Tech
+                                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Mission Section */}
+                <section id="mission" className="w-full scroll-mt-24">
+                    <div className="bg-surface-dark rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row gap-12 min-h-[400px] group hover:bg-[#1c2638] transition-all duration-500 border border-white/5 opacity-0 animate-fade-in-up [animation-delay:400ms] hover:border-white/10 hover:shadow-2xl">
+                        <div className="flex flex-col justify-center gap-6 flex-1">
+                            <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10 group-hover:bg-primary group-hover:border-primary transition-colors duration-500">
+                                <span className="material-symbols-outlined">flag</span>
+                            </div>
+                            <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Our Mission</h3>
+                            <p className="text-slate-400 text-lg md:text-xl leading-relaxed group-hover:text-slate-300 transition-colors max-w-xl">
+                                To build physical AI that integrates seamlessly into human environments, prioritizing safety, adaptability, and helpfulness above all else. We are defining the standards for how robots and humans live together.
+                            </p>
+                        </div>
+                        <div className="flex-1 rounded-xl overflow-hidden min-h-[300px] relative">
+                            <div 
+                                className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" 
+                                style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbWulYFLfEJm6Wiuz3Mz6VHqFISVEigzBZ5UtxMj_dd0jFRe4LVDxbRaIWvwIw0bx953iWLVfsBGBHWOvgad1QZvgz1NSrRJ_PZ2JXK9BYlREGjkDbPTb7q8y5Z9ViVnM-ziCfzkb9mep_TT-3soZBGAMCMuSnt2drVUEOdoJ3LhNmvzOuQ1ZPiwZbWcjJY2iNIiFURZis82ATTjBOkqBc8WSB56N7V_IIqM4LIhYRSFGX3XuxGA3i8Shjr8yKK4bo46UpZAZoIg")'}}
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* The Fleet Preview */}
+                <section className="w-full flex flex-col gap-12 py-10 opacity-0 animate-fade-in-up [animation-delay:800ms]">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4 md:px-0">
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">The Fleet</h2>
+                            <p className="text-slate-400 text-lg md:text-xl font-light max-w-md">Advanced robotics for specialized applications.</p>
+                        </div>
+                        <Link to="/fleet" className="text-white font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors flex items-center gap-2 group">
+                            View All Specifications
+                            <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                        </Link>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 w-full bg-surface-dark rounded-[2rem] overflow-hidden border border-white/5 divide-y md:divide-y-0 md:divide-x divide-white/10 shadow-2xl">
+                        {[
+                            {
+                                id: '01', 
+                                cat: 'Service', 
+                                title: 'Reception & Guidance', 
+                                sub: 'The Future of First Impressions',
+                                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBYuAgKmDldufveoV1ULGMPxHTGNU1QekO7k_igRgxpsI7jO2Wiwdl-59ZHw7vr5twsmp56H2HVA57qh3I2dimXP2kF9eh1zNfkh18D0xKIRDKO1fea_qGmen4fIIdi5sMHGtZwMy5HdZDCGIBnNhP2diospoun7bIWBNsKQn_Q-s8MAYtX29EwuY-C1TlbxPcwZpwL7NBPYKIG_UoDcC2OMonrWGE6gY0-e95uToU5dQcr3JjsJCGt2I08z5nwQIIadXOLGwJpVA'
+                            },
+                            {
+                                id: '02', 
+                                cat: 'Education', 
+                                title: 'ROBI - AI Teacher', 
+                                sub: 'Your Partner in Modern Education',
+                                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnwR8mmdUFFsiulq24Xx672WdPYkDE2naaQJQ59033lwK_AMw1t60CJO_fLQPrdSSVyXXH8i2R3EtAILTzN_yQhVgSov-ySlK5vCWQQBMDvDBzi3gp-5MyEcNfuPG6fOQRUao-FG3Kw4J5aCQF1DlpefkN-e6ZTDLqFXQ4F3Hm3tlAjgQetNBukyKEeYjQYIDtRK5IlAYitBhiSa12hVBf01M0VCsrThgg0aqzc9GjGSoOJi0AhNZiIj8PESmyYhkoYWdVRMsv7w'
+                            },
+                            {
+                                id: '03', 
+                                cat: 'Research', 
+                                title: 'Max Robot', 
+                                sub: 'The Open Source Platform',
+                                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAQ9cpGX-p05Fy7rgo3IVNN442fQKGUAeEZ3heuM3Ps3AsNWQmbJBDQBbCb4JRYZ_dngHfOZf78qMhcnVqWJDY33A-zcegFaKjnVdftPGAo3NCVIjsSbkvCiOQjBdCleaqjYBAnRF056UovHTY07vNPSYRDeMu2f7QpJB_spjQG4K8Yld1UMg4GX6Wl63NcHbV3luceKN7IR-4g1luJNpZk0ULKFc09NaTX9opO72-0e-coKpbLI7IxsEfyMYnZGj-k6gvcqwJrDg'
+                            }
+                        ].map(bot => (
+                            <div key={bot.id} className="group relative flex flex-col min-h-[500px] overflow-hidden">
+                                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" style={{backgroundImage: `url("${bot.img}")`}}></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                                <div className="relative z-10 flex flex-col h-full justify-end p-8 gap-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span className="text-primary font-bold text-xs tracking-widest uppercase mb-2 opacity-80 group-hover:opacity-100 transition-opacity">{bot.id} — {bot.cat}</span>
+                                    <h3 className="text-white text-3xl font-bold leading-tight">{bot.title}</h3>
+                                    <p className="text-slate-400 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{bot.sub}</p>
+                                    <Link to="/fleet" className="inline-flex items-center text-white text-xs font-bold tracking-wider uppercase hover:text-primary transition-colors mt-auto">
+                                        Discover <span className="material-symbols-outlined text-sm ml-1 -rotate-45 group-hover:rotate-0 transition-transform">arrow_forward</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* CTA Section */}
+                <section className="relative w-full rounded-[2.5rem] bg-primary overflow-hidden px-6 py-20 md:p-24 text-center opacity-0 animate-fade-in-up [animation-delay:1000ms]">
+                    <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJgJQ8cBZ-dIBTM0BcW8DV-e1BaNCCxdRyNZeCO9j4sX6BIkTMMS7SySvwgcEMq4PRaS8s6zzblC7sw6eQXlyc1jb9N23-bGNR5FVJ_YxIlgqjCuIHna1nmJ0gdprte8VGFrbRF1Wn0JwRV4VATq145geELCRMjiAKW4VfFmkXoOlKjVVHKGRMJ1IbRKwj765jxknMx3Qjwyw05iKpv14AUAD5rqXG17lXssDjeLQPIlKKRWlPFCgSFKuyAGQ2kt1bh7AJjLX6BQ")'}}></div>
+                    <div className="relative z-10 flex flex-col items-center gap-8 max-w-2xl mx-auto">
+                        <h2 className="text-white text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                            Ready to Transform Your Space?
+                        </h2>
+                        <p className="text-blue-100 text-lg md:text-xl">
+                            Join the future of automation. Discover how Mensch Robotics can elevate your daily operations.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
+                            <Link to="/contact" className="h-14 px-8 rounded-full bg-white text-primary font-bold text-lg hover:bg-blue-50 hover:scale-105 transition-all w-full sm:w-auto flex items-center justify-center">
+                                Get Started Now
+                            </Link>
+                            <Link to="/contact" className="h-14 px-8 rounded-full border border-white/30 text-white font-bold text-lg hover:bg-white/10 hover:scale-105 transition-all w-full sm:w-auto flex items-center justify-center">
+                                Contact Sales
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    );
+};

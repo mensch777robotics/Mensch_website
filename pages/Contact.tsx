@@ -1,0 +1,82 @@
+import React from 'react';
+
+export const Contact: React.FC = () => {
+    return (
+        <div className="min-h-screen flex flex-col pt-20">
+             <main className="flex-grow flex flex-col items-center justify-center w-full px-5 md:px-10 lg:px-40 py-10 md:py-20">
+                <div className="max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                    {/* Left Column: Info */}
+                    <div className="flex flex-col gap-16 pt-8">
+                        <div className="flex flex-col gap-6">
+                            <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium tracking-[-0.03em] leading-[0.9] text-white">
+                                Get In<br/>Touch
+                            </h1>
+                            <p className="text-slate-400 text-lg font-body leading-relaxed max-w-lg">
+                                Interested in deploying Physical AI in your institution or office? Contact us for a demo or consultation.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-8">
+                            {[
+                                {icon: "call", title: "Call Us", val: "+91 7907362027", link: "tel:+917907362027"},
+                                {icon: "mail", title: "Email Us", val: "menschrobotics11@gmail.com", link: "mailto:menschrobotics11@gmail.com"},
+                                {icon: "location_on", title: "Location", val: "Kerala, India", link: "#"}
+                            ].map((item) => (
+                                <div key={item.title} className="flex items-center gap-6 group">
+                                    <div className="w-12 h-12 rounded-full bg-[#1a1f2e] flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold tracking-[0.15em] text-slate-500 mb-1 uppercase">{item.title}</span>
+                                        <a href={item.link} className="text-xl font-medium text-white hover:text-primary transition-colors">
+                                            {item.val}
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Column: Form */}
+                    <div className="w-full bg-[#0f0f0f] border border-white/10 rounded-[32px] p-6 md:p-10 shadow-xl">
+                        <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">First Name</label>
+                                    <input className="w-full bg-black border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="John" type="text" />
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Last Name</label>
+                                    <input className="w-full bg-black border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Doe" type="text" />
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Email</label>
+                                <input className="w-full bg-black border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="john@example.com" type="email" />
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Interest</label>
+                                <div className="relative">
+                                    <select className="w-full bg-black border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none cursor-pointer">
+                                        <option>Education (Robi/Max)</option>
+                                        <option>Service Robots</option>
+                                        <option>Research & Development</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                    <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none text-xl">expand_more</span>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Message</label>
+                                <textarea className="w-full bg-black border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="How can we help you?" rows={4}></textarea>
+                            </div>
+                            <button className="mt-4 w-full bg-white hover:bg-slate-200 text-black font-bold text-sm tracking-[0.05em] uppercase rounded-xl py-4 flex items-center justify-center gap-2 transition-colors">
+                                Send Message
+                                <span className="material-symbols-outlined text-[18px]">send</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
+};
