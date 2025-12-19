@@ -3,8 +3,8 @@ import React from 'react';
 export const Contact: React.FC = () => {
     return (
         <div className="min-h-screen flex flex-col pt-20">
-             <main className="flex-grow flex flex-col items-center justify-center w-full px-5 md:px-10 lg:px-40 py-10 md:py-20">
-                <div className="max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                 <main className="flex-grow flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 lg:px-16 py-10 md:py-20">
+                     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
                     {/* Left Column: Info */}
                     <div className="flex flex-col gap-16 pt-8">
                         <div className="flex flex-col gap-6">

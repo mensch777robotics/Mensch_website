@@ -5,7 +5,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Fleet } from './pages/Fleet';
 import { Contact } from './pages/Contact';
-import { GeminiChat } from './components/GeminiChat';
+import { AboutUs } from './pages/AboutUs';
 
 // Scroll to top helper
 const ScrollToTop = () => {
@@ -30,15 +30,15 @@ const App: React.FC = () => {
     return (
         <Router>
             <ScrollToTop />
-            <div className="flex min-h-screen w-full flex-col bg-background-dark text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+            <div className="flex min-h-screen w-full flex-col bg-white text-slate-900 font-display overflow-x-hidden selection:bg-primary selection:text-white">
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/fleet" element={<Fleet />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
-                <GeminiChat />
             </div>
         </Router>
     );

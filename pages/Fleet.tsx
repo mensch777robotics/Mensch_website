@@ -69,7 +69,7 @@ export const Fleet: React.FC = () => {
             {/* Hero */}
             <section className="relative pt-32 pb-20 px-6 overflow-hidden opacity-0 animate-fade-in-up">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10"></div>
-                <div className="max-w-7xl mx-auto text-center">
+                <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16 text-center">
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 text-white">
                         The <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500">Fleet</span>
                     </h1>
@@ -83,7 +83,7 @@ export const Fleet: React.FC = () => {
             <div className="flex flex-col gap-0">
                 {robots.map((bot, idx) => (
                     <section key={bot.id} className={`relative py-24 border-t border-white/5 opacity-0 animate-fade-in-up ${idx % 2 === 0 ? 'bg-gradient-to-b from-transparent to-[#0a0a0c]' : 'bg-[#08080a]'}`} style={{animationDelay: `${(idx + 1) * 200}ms`}}>
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16">
                             <div className={`grid lg:grid-cols-2 gap-16 items-center`}>
                                 {/* Image Column */}
                                 <div className={`relative group ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
